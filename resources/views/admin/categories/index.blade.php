@@ -8,7 +8,7 @@
         <!--begin::Row-->
         <div class="row">
           <div class="col-sm-6">
-            <h3 class="mb-0">Dashboard</h3>
+            <h3 class="mb-0">Категории</h3>
           </div>
           <div class="col-sm-6">
             <ol class="breadcrumb float-sm-end">
@@ -40,7 +40,7 @@
                 <tr>
                   <th scope="col">ID</th>
                   <th scope="col">Название</th>
-                  <th scope="col" colspan="2" class="text-center">Действия</th>
+                  <th scope="col" colspan="3" class="text-center">Действия</th>
 
                 </tr>
               </thead>
@@ -49,8 +49,17 @@
                   <tr>
                     <td>{{ $category->id }}</td>
                     <td>{{ $category->title }}</td>
-                    <td><a href="{{ route('admin.category.show', $category->id) }}"><i class="bi bi-eye"></i></a></td>
-                    <td><a href="{{ route('admin.category.edit', $category->id) }}"><i class="bi bi-pencil"></i></a></td>
+                    <td class="text-center"><a href="{{ route('admin.category.show', $category->id) }}"><i class="bi bi-eye"></i></a></td>
+                    <td class="text-center"><a href="{{ route('admin.category.edit', $category->id) }}"><i class="bi bi-pencil"></i></a></td>
+                    <td class="text-center">
+                      <form action="{{ route('admin.category.delete', $category->id) }}" method="POST">
+                        @csrf
+                        @method('DELETE')
+                        <button type="submit" class="border-0 bg-transparent">
+                        <i class="bi bi-trash text-danger" role="button"></i>
+                        </button>
+                      </form>
+                    </td>
                   </tr>
                 @endforeach
               </tbody>

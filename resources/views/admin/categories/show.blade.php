@@ -10,6 +10,13 @@
           <div class="col-sm-6 d-flex align-items-center">
             <h3 class="mb-0 me-2">{{ $category->title }}</h3>
             <a href="{{ route('admin.category.edit', $category->id) }}"><i class="bi bi-pencil"></i></a>
+            <form action="{{ route('admin.category.delete', $category->id) }}" method="POST">
+              @csrf
+              @method('DELETE')
+              <button type="submit" class="border-0 bg-transparent">
+                <i class="bi bi-trash text-danger" role="button"></i>
+              </button>
+            </form>
           </div>
           <div class="col-sm-6">
             <ol class="breadcrumb float-sm-end">
