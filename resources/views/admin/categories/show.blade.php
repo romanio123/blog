@@ -7,8 +7,9 @@
       <div class="container-fluid">
         <!--begin::Row-->
         <div class="row">
-          <div class="col-sm-6">
-            <h3 class="mb-0">{{ $category->title }}</h3>
+          <div class="col-sm-6 d-flex align-items-center">
+            <h3 class="mb-0 me-2">{{ $category->title }}</h3>
+            <a href="{{ route('admin.category.edit', $category->id) }}"><i class="bi bi-pencil"></i></a>
           </div>
           <div class="col-sm-6">
             <ol class="breadcrumb float-sm-end">
@@ -29,27 +30,27 @@
         <!--begin::Row-->
         <div class="row">
           <!--begin::Col-->
-        <div class="row">
-          <div class="col-12">
-            <table class="table mt-3 w-25">
-              <tbody>
-                <tr>
-                  <td>ID</td>
-                  <td>{{ $category->id }}</td>
-                </tr>
-                <tr>
-                  <td>Название</td>
-                  <td>{{ $category->title }}</td>
-                </tr>
-              </tbody>
-            </table>
+          <div class="row">
+            <div class="col-12">
+              <table class="table mt-3 w-25">
+                <tbody>
+                  <tr>
+                    <td>ID</td>
+                    <td>{{ $category->id }}</td>
+                  </tr>
+                  <tr>
+                    <td>Название</td>
+                    <td>{{ $category->title }}</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
           </div>
+          <!--begin::Small Box Widget 4-->
         </div>
-        <!--begin::Small Box Widget 4-->
+        <!--end::Small Box Widget 4-->
       </div>
-      <!--end::Small Box Widget 4-->
-    </div>
-    <!--end::Col-->
+      <!--end::Col-->
     </div>
     <!--end::Row-->
     <!--begin::Row-->

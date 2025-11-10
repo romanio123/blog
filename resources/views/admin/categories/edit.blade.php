@@ -28,8 +28,9 @@
             <div class="row">
               <!--begin::Col-->
               <div class="col-12">
-              <form action="#" class="w-25" method="POST">
+              <form action="{{ route('admin.category.update', $category->id) }}" class="w-25" method="POST">
                 @csrf
+                @method('PATCH')
                 <div class="form-group">
                 <label for="exampleInputEmail1" class="form-label">Название</label>
                 <input type="text" class="form-control" name="title" value="{{ $category->title }}">
