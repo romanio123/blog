@@ -5,14 +5,9 @@
           <a href="#" class="brand-link">
             <!--begin::Brand Image-->
             <h1>Blog</h1>
-            <!--end::Brand Image-->
-            <!--begin::Brand Text-->
-            <!--end::Brand Text-->
           </a>
           <!--end::Brand Link-->
         </div>
-        <!--end::Sidebar Brand-->
-        <!--begin::Sidebar Wrapper-->
         <div class="sidebar-wrapper">
           <nav class="mt-2">
             <!--begin::Sidebar Menu-->
@@ -25,7 +20,7 @@
               id="navigation"
             >
               <li class="nav-item">
-                <a href="#" class="nav-link">
+                <a href="{{ route('admin.category.index') }}" class="nav-link">
                   <i class="nav-icon"></i>
                   <p>Категории</p>
                 </a>
