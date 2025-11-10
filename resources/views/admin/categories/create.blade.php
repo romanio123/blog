@@ -7,7 +7,7 @@
           <div class="container-fluid">
             <!--begin::Row-->
             <div class="row">
-              <div class="col-sm-6"><h3 class="mb-0">Dashboard</h3></div>
+              <div class="col-sm-6"><h3 class="mb-0">Добавление категории</h3></div>
               <div class="col-sm-6">
                 <ol class="breadcrumb float-sm-end">
                   <li class="breadcrumb-item"><a href="#">Home</a></li>
@@ -27,12 +27,14 @@
             <!--begin::Row-->
             <div class="row">
               <!--begin::Col-->
-              <div class="col-1">
-                <a href="{{ route('admin.category.create') }}" class="btn btn-block btn-primary">Добавить</a>
-              </div>
               <div class="col-12">
-              Категории
-
+              <form action="#" class="w-25">
+                <div class="form-group">
+                <label for="exampleInputEmail1" class="form-label">Название</label>
+                <input type="text" class="form-control">
+                </div>
+                <input type="submit" class="btn btn-primary mt-3" value="Добавить"></input>
+              </form>
               </div>
                 <!--begin::Small Box Widget 4-->
                 </div>
