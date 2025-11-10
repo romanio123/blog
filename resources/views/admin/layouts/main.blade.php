@@ -89,7 +89,14 @@
           <!--end::End Navbar Links-->
         </div>
         <!--end::Container-->
+        
       </nav>
+            <footer class="app-footer">
+        <strong>
+            Blog
+        </strong>
+        <!--end::Copyright-->
+      </footer>
       <!--end::Header-->
       <!--begin::Sidebar-->
 @include('admin.includes.sidebar')
@@ -98,12 +105,7 @@
 @yield('content')
       <!--end::App Main-->
       <!--begin::Footer-->
-      <footer class="app-footer">
-        <strong>
-            Blog
-        </strong>
-        <!--end::Copyright-->
-      </footer>
+
       <!--end::Footer-->
     </div>
     <!--end::App Wrapper-->
