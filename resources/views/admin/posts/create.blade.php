@@ -52,12 +52,26 @@
                                 <label for="formFile" class="form-label">Добавить превью</label>
                                 <input class="form-control" type="file" id="formFile" name="preview_image">
                             </div>
-
+                            @error('preview_image')
+                                <div class="text-danger">Это поле необходимо заполнить {{ $message }}</div>
+                            @enderror
                             <div class="form-group mt-3 w-50">
                                 <label for="formFile" class="form-label">Добавить главное изображение</label>
                                 <input class="form-control" type="file" id="formFile" name="main_image">
                             </div>
-
+                            @error('main_image')
+                                <div class="text-danger">Это поле необходимо заполнить {{ $message }}</div>
+                            @enderror
+                            <div class="form-group mt-3 w-50">
+                                <label>Выберите категорию</label>
+                                <select name="category_id" class="form-control">
+                                    @foreach ($categories as $category)
+                                        <option value="{{ $category->id }}"
+                                            {{ $category->id == old('category_id') ? 'selected' : '' }}
+                                            >{{ $category->title }}</option>
+                                    @endforeach
+                                </select>
+                            </div>
                             <div class="form-group">
                                 <input type="submit" class="btn btn-primary mt-3" value="Добавить">
                             </div>
